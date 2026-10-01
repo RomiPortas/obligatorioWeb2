@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Vollkorn", sans-serif;
+    text-decoration: none;
+}
+
+:root{
+    --primario:#388E3C;
+    --secundario: #4CAF50;
+    --acento: #7c3c00;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+#encabezado {
+    background-color: var(--primario);
+    padding: 16px;
+    display: flex;
+
+}
+
+.logo {
+    color: var(--acento);
+    font-size: x-large;
+    font-weight: bold;
+}
+
+.menuIcon {
+    background: none;
+    border: none;
+    padding: 0.5rem;
+    cursor: pointer;
+}
+
+.menuIcon:hover {
+    text-shadow: 0 6px 12px rgba(0, 0, 12, 0.2);
+}
