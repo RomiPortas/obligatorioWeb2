@@ -7,37 +7,615 @@
 }
 
 :root{
-    --primario:#388E3C;
-    --secundario: #4CAF50;
-    --acento: #7c3c00;
+    --background:#f5efe4;
+    --primary: #388E3C;
+    --text: #24302F;
 }
 
 body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    color: var(--text);
+    text-align: center;
+}
+
+img {
+    display: block;
+    max-width: 100%;
 }
 
 #encabezado {
-    background-color: var(--primario);
-    padding: 16px;
+    background-color: var(--background);
+}
+
+header {
+    padding: 1em;
+    border-bottom: 1px solid var(--primary);
     display: flex;
-
+    justify-content: space-between;
+    align-items: center;
 }
 
-.logo {
-    color: var(--acento);
-    font-size: x-large;
+#logo img {
+    width: 8em;
+}
+
+nav {
+    display: none;
+}
+
+#hamburgerIcon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.4rem;
+}
+
+#hamburgerIcon img {
+    width: 1.5em;
+}
+
+
+
+.hero {
+    max-width: 45em;
+    margin: 0 auto;
+    padding: 2em 1.2em 3em;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.hero p {
+    font-size: 1em;
+}
+
+.hero h1 {
+    font-size: 2.2em;
+    font-style: italic;
+    line-height: 1.2;
+}
+
+.hero > a {
+    color: white;
+    background-color: var(--primary);
+    border-radius: 2em;
+    display: inline-block;
+    padding: 0.5em 1.5em;
+    font-size: 1.2em;
+    margin-bottom: 1em;
+}
+
+
+
+#problematica {
+    display: grid;
+    gap: 1.5em;
+    margin: 0 auto;
+    padding: 2em 1.5em;
+}
+
+#problematica article {
+    background-color: var(--background);
+    border: 1px solid var(--text);
+    border-radius: 1em;
+    overflow: hidden;
+    padding: 1.2em;
+}
+
+/* CHEQUEAR ESTO */
+#problematica article:nth-child(n + 3) {
+    display: none;
+}
+
+#problematica article img {
+    width: 100%;
+    aspect-ratio: 4 / 3; /* CHEQUEAR ESTO */
+    object-fit: cover;
+    border-radius: 1em;
+}
+
+#problematica article h2 {
+    padding: 1em 0 0.3em;
+    font-size: 1.4em;
+}
+
+#problematica article p {
+    line-height: 1.4;
+}
+
+
+#destacado {
+    display: block;
+}
+
+
+
+#grid {
+    display: grid;
+    background-color: var(--background);
+}
+
+#grid > img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+}
+
+#grid > div {
+    display: flex;
+    flex-direction: column;
+}
+
+#grid > div > div {
+    padding: 1.5em;
+}
+
+#grid > div > div p {
+    margin-bottom: 0.5em;
+    font-size: 1em;
+}
+
+#grid > div > div h2 {
+    font-size: 1.4em;
+    line-height: 1.2;
+}
+
+#grid article {
+    background-image: url(img/pesto.jpg);
+    background-position: center;
+    background-size: cover;
+    min-height: 12em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5em;
+}
+
+#grid article a {
+    color: var(--text);
+    background-color: var(--background);
+    padding: 0.5em 4em;
+    border-radius: 2em;
     font-weight: bold;
+    border: 1px solid var(--primary);
 }
 
-.menuIcon {
-    background: none;
-    border: none;
-    padding: 0.5rem;
-    cursor: pointer;
+
+.informacion {
+    display: none;
 }
 
-.menuIcon:hover {
-    text-shadow: 0 6px 12px rgba(0, 0, 12, 0.2);
+
+
+#reciclar {
+    display: grid;
+    gap: 1.5em;
+    padding: 2em 1.5em;
+}
+
+#reciclar article {
+    position: relative;
+    padding: 1.2em;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    background-color: var(--background);
+    border-radius: 1em;
+}
+
+#reciclar article:nth-child(3) {
+    display: none;
+}
+
+#reciclar article > img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    border-radius: 1.2em;
+    object-fit: cover;
+}
+
+#reciclar article h2 {
+    position: absolute;
+    top: 3em;
+    right: 1em;
+    background-color: var(--primary);
+    color: white;
+    font-size: 1.2em;
+    padding: 0.5em 2em;
+    border-radius: 2em 0 0 2em;
+}
+
+#reciclar article h3 {
+    font-size: 1.3em;
+}
+
+#reciclar article p {
+    line-height: 1.4;
+}
+
+#reciclar article a {
+    color: white;
+    background-color: var(--primary);
+    border-radius: 2em;
+    padding: 0.5em 1em;
+    font-size: 1.2em;
+    margin-top: auto;
+    display: inline-block;
+}
+
+
+
+.novedades {
+    padding: 1.5em;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    background-color: var(--background);
+}
+
+.novedades h2 {
+    font-size: 1.2em;
+}
+
+.novedades form {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+/* CHEQUEAR ESTO */
+
+.novedades form > input[type="email"] {
+    font-family: inherit; 
+    font-size: 1em;
+    padding: 1em;
+    border-radius: 0.6em;
+    border: 1px solid var(--primary);
+    width: 100%;
+}
+
+.novedades form div {
+    font-size: 0.8em;
+    text-align: left;
+    gap: 0.5em;
+    display: flex;
+    align-items: flex-start;
+}
+
+/* CHEQUEAR FLEX-SHRINK */
+.novedades form input[type="checkbox"] {
+    flex-shrink: 0;
+    width: auto;
+    padding: 0;
+    margin-top: 0.2em;
+}
+
+.novedades form button {
+    font-size: 1em;
+    font-family: inherit;
+    padding: 0.6em;
+    background-color: var(--primary);
+    color: white;
+    border: 1px solid var(--primary);
+    border-radius: 0.6em;
+}
+
+
+
+
+footer {
+    padding: 2.2em 1.2em;
+    background-color: var(--text);
+    color: var(--background);
+}
+
+footer p {
+    font-size: 0.8em;
+    line-height: 1.4;
+}
+
+
+
+/* TABLET */
+
+@media all and (min-width:768px) {
+
+    header {
+        padding: 1em 2em;
+    }
+
+    #logo img {
+        width: 10em;
+    }
+
+    nav {
+        display: flex;
+        align-items: center;
+        gap: 1.5em;
+    }
+
+    nav a {
+        color: var(--text);
+    }
+
+    nav img {
+        width: 1.5em;
+    }
+
+    #hamburgerIcon {
+        display: none;
+    }
+
+
+    .hero {
+        max-width: 55em;
+        padding: 4em 2em 5em;
+    }
+
+    .hero h1 {
+        font-size: 3em;
+    }
+
+
+    #problematica {
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 75em;
+        padding: 3em 2em;
+    }
+
+    #problematica article:nth-child(n + 3) {
+        display: block;
+    }
+
+    #grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    #grid > img {
+        grid-column: 1 / -1;
+        aspect-ratio: 16 / 7;
+    }
+
+    #grid > div {
+        grid-column: 1 / -1;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    #grid > div > div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 2em;
+    }
+
+    #grid article {
+        min-height: 100%;
+    }
+
+    .informacion {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 1em;
+        padding: 3em 2em;
+        background-color: var(--background);
+    }
+
+    .informacion h3 {
+        font-size: 1em;
+    }
+
+    .informacion h2 {
+        font-size: 1.8em;
+        line-height: 1.2;
+    }
+
+    .informacion p {
+        line-height: 1.5;
+    }
+
+    .informacion a {
+        align-self: center;
+        padding: 0.5em 1.5em;
+        color: white;
+        background-color: var(--primary);
+        border-radius: 2em;
+    }
+
+
+    #reciclar {
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 75em;
+        margin: 0 auto;
+        padding: 3em 2em;
+    }
+
+    #reciclar article:nth-child(3) {
+        display: none;
+    }
+
+
+
+    .novedades {
+        padding: 2em;
+    }
+
+    .novedades form {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        gap: 1em;
+        align-items: center;
+    }
+
+    .novedades form > input[type="email"] {
+        grid-column: 1;
+    }
+
+    .novedades form button {
+        grid-column: 2;
+        grid-row: 1;
+        padding: 0.8em 1.5em;
+    }
+
+    .novedades form div {
+        grid-column: 1 / -1;
+        grid-row: 2;
+    }
+
+}
+
+/* DESKTOP */
+
+@media all and (min-width:1200px) {
+
+    header {
+        max-width: 75em;
+        margin: 0 auto;
+        padding: 1.25em 0;
+    }
+
+    #logo img {
+        width: 11em;
+    }
+
+    nav {
+        gap: 2em;
+    }
+
+    nav a:hover {
+        color: var(--primary);
+        text-shadow: 0 6px 12px rgba(0, 0, 12, 0.2);
+    }
+
+    .hero {
+        max-width: 65em;
+        padding: 6em 2em 8em;
+    }
+
+    .hero h1 {
+        font-size: 4em;
+    }
+
+    .hero > a {
+        align-items: center;
+        margin-bottom: 0;
+        padding: 0.4em 1.5em;
+        font-size: 1em;
+    }
+
+    .hero > a:hover {
+        box-shadow: 0 0.4em 0.8em rgba(0, 0, 0, 0.2);
+    }
+
+    #problematica {
+        grid-template-columns: repeat(4, 1fr);
+        max-width: 75em;
+        margin-top: -4em;
+        position: relative;
+        z-index: 1;
+        padding: 0 2em 4em;
+    }
+
+
+    #destacado {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        width: 100%;
+    }
+
+    #grid {
+        height: 100%;
+        grid-column: 1;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    #grid > img {
+        width: 100%;
+        height: 100%;
+        grid-column: 1;
+        grid-row: 1;
+        aspect-ratio: auto;
+        object-fit: cover;
+    }
+
+    #grid > div {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column: 1;
+        grid-row: 2;
+        min-height: 0;
+    }
+
+    #grid > div > div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 2em;
+    }
+
+    #grid > div > div p {
+        margin-bottom: 0.5em;
+    }
+
+    #grid > div > div h2 {
+        font-size: 1.8em;
+    }
+
+    #grid article {
+        height: 100%;
+        min-height: 0;
+    }
+
+    #grid div article a:hover {
+        background-color: var(--primary);
+        color: var(--background);
+        box-shadow: 0 0.4em 0.8em rgba(0, 0, 0, 0.2);
+    }
+
+    .informacion {
+        height: 100%;
+        padding: 4em;
+        grid-column: 2;
+        grid-row: 1;
+    }
+
+    .informacion h2 {
+        font-size: 2.3em;
+    }
+
+    .informacion a:hover {
+        box-shadow: 0 0.4em 0.8em rgba(0, 0, 0, 0.2);
+    }
+
+
+    #reciclar {
+        padding: 5em 2em;
+        max-width: 75em;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    #reciclar a:hover {
+        box-shadow: 0 0.4em 0.8em rgba(0, 0, 0, 0.2);
+    }
+
+    #reciclar article:nth-child(3) {
+        display: flex;
+    }
+
+
+
+    .novedades {
+        padding: 3em;
+    }
+
+    .novedades form {
+        width: 100%;
+        margin: 0 auto;
+        max-width: 60em;
+    }
+
 }
